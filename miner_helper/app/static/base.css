@@ -1,0 +1,39 @@
+* {    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;}
+
+body {    margin: 1em;
+    background-color: #000000; /* Fondo negro */
+    color: #00FF00; /* Texto verde brillante */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body tome toda la altura */}
+
+li {margin-left: 10%;}
+h2 {font-size: 2em;
+    text-align: center;
+    margin-top: 20px;}
+h3 {font-size: 1em;}
+p, ul{margin-left: 10%;margin-right: 10%;}
+
+/* Estilo del footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #001400;
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer p, .icon {
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 1%;
+    -webkit-text-stroke: 1px black;
+    color: #00FF00;
+}

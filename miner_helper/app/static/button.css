@@ -1,0 +1,33 @@
+.custom-file-upload {
+    display: inline-block;
+    background-color: #001400; /* Fondo oscuro */
+    color: #00FF00; /* Texto verde */
+    border: 1px solid #00FF00; /* Borde verde */
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-submit {
+    background-color: #001400; /* Fondo oscuro */
+    color: #00FF00; /* Texto verde */
+    border: 1px solid #00FF00; /* Borde verde */
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
+}
+
+.custom-file-upload:hover,
+.custom-submit:hover {
+    background-color: #00FF00; /* Fondo verde brillante al pasar el ratón */
+    color: #001400; /* Texto oscuro */
+}
+/* Estilo del botón de carga de archivos oculto */
+input[type="file"] {
+    display: none;
+}

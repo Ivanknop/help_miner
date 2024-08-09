@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+<div class="container">
+    <div class="main-content">
+        {% include 'side_bar.html' %}
+<div class="image-container">
+    {% if box_plots %}
+        {% for box_plot in box_plots %}
+        <div>
+            <img src="{{ url_for('static', filename='box_plots/' ~ box_plot) }}" alt="Diagrama de Caja">
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>No se encontraron diagramas.</p>
+    {% endif %}
+</div>
+</div>
+</div>
+{% include 'footer.html' %}

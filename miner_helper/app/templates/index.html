@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+<p>HelpMiner es una herramienta que facilita el análisis exploratorio de datasets. </p>
+<p>Utilizamos Pandas como librería principal para el procesamiento y Matplotlib para los gráficos que se generan.</p>
+<ul>Funcionalidad existente:
+    <li>Histrogramas</li>
+    <li>Diagrama de caja</li>
+    <li>Matriz de Correlación</li>
+    <li>Diagrama de Barras</li>
+</ul>
+</div>
+<h2>Atención</h2>
+<p>Todas las imágenes generadas se borrarán cuando se vuelva al Inicio. Descargarlas si no se quiere tener que volver a proce</p>
+
+<div class="container">
+    <a class="analisis-link custom-file-upload" href="{{ url_for('process') }}">Empezar</a>
+</div>
+
+
+
+<ul>Próximamente:
+    <li>Histogramas personalizados</li>
+    <li>Diagrama de dispersión</li>
+    <li>Filtros de datos </li>
+</ul>
+{% include 'footer.html' %}

@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+<h2 >Instructivo</h2>
+<div>
+    <ul>
+        <li>1. Cargar el dataset. Debe ser en formato csv</li>
+        <li>2. Seleccionar en 'procesar'</li>
+    </ul>
+</div>
+
+<form class= "file" action="/process_file" method="post" enctype="multipart/form-data">
+    <label for="file-upload" class="custom-file-upload">
+        Cargar archivo CSV
+    </label>
+    <input type="file" id="file-upload" name="file" accept=".csv" required onchange="updateFileName()">
+    <div class="file-name" id="file-name">No se ha seleccionado ningún archivo</div>
+    
+    <input type="submit" value="Procesar" class="custom-submit">
+</form>
+
+<script>
+    function updateFileName() {
+        var input = document.getElementById('file-upload');
+        var fileName = input.files[0] ? input.files[0].name : 'No se ha seleccionado ningún archivo';
+        document.getElementById('file-name').textContent = fileName;
+    }
+</script>
+{% include 'footer.html' %}

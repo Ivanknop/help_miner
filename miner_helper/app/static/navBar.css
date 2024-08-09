@@ -1,0 +1,64 @@
+/* Estilos para el navbar */
+.navbar {
+    background-color: #001400 !important;
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* Ajusta el padding según tu diseño */
+    color: #00FF00;
+}
+
+/* Contenedor del logo */
+.nav-logo {
+    margin-right: auto; /* Empuja el título hacia el centro */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    background-color: #003300; /* Fondo al pasar el ratón */
+}
+
+/* Título en el centro del navbar */
+.nav-title {    
+    font-size: 2rem; /* Tamaño de fuente relativo al tamaño del texto raíz */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    flex: 1; /* Hace que el título ocupe el espacio restante */
+}
+
+/* Estilos para la marca del navbar */
+.navbar-dark .navbar-brand {
+    color: #00FF00; /* Color del texto de la marca */
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: #1aff00; /* Color al pasar el ratón */
+}
+
+/* Estilos para los íconos dentro de los enlaces */
+.navbar-brand {
+    font-size: 2em; /* Tamaño del ícono */
+}
+
+.sidebar {
+    background-color: #001400;
+    position: fixed;
+    left: 1em;
+    height: 100%;
+}
+
+.sidebar-links {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar-links li {
+    margin-bottom: 1em;
+}
+.sidebar-links a {
+    text-decoration: none;
+    color: #1aff00;
+}
+.sidebar-links a:hover {
+    text-decoration: underline;
+}
+.main-content {
+    display: flex;
+    margin-left: 10%; 
+}

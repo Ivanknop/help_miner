@@ -1,0 +1,23 @@
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="main-content">
+        {% include 'side_bar.html' %}
+        
+        <div class="content">
+            <div class="image-container">
+                {% if correlation_matrix %}
+                    <div>
+                        <img src="{{ url_for('static', filename='correlation_matrix/correlation_matrix.png') }}" alt="Matriz de correlación">
+                    </div>
+                {% else %}
+                    <p>No se encontró matriz de correlación.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% include 'footer.html' %}

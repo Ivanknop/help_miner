@@ -1,0 +1,61 @@
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="main-content">
+        {% include 'side_bar.html' %}
+        <div class="content">
+            <h3>Archivo: {{ results['name'] }}</h3>
+            <details> <!-- Armo un desplegable -->
+                <summary>Columnas y tipos</summary>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Columna</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for column, dtype in results['info'].items() %}
+                        <tr>
+                            <td>{{ column }}</td>
+                            <td>{{ dtype }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </details>
+
+            <details>
+                <summary>Dimensiones del dataset</summary>
+                <div>
+                    <ul>
+                        <li>Cantidad de Filas: {{ results['shape'][0] }}</li> 
+                        <li>Cantidad de Columnas: {{ results['shape'][1] }}</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details>
+                <summary>Descripción estadística general</summary>
+                <div>
+                    {{ results['describe']|safe }} <!-- Usar safe para mostrar HTML sin escapar -->
+                </div>
+            </details>
+
+            <details>
+                <summary>Datos faltantes</summary>
+                <div>
+                    {{ results['missing']|safe }} 
+                </div>
+            </details>
+
+            <details>
+                <summary>Datos Duplicados</summary>
+                <div>
+                    {{ results['duplicates']|safe }} 
+                </div>
+            </details>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}

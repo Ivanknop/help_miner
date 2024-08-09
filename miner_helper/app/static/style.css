@@ -1,0 +1,55 @@
+/* Estilo de tablas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.table, .table th, .table td {
+    border: 1px solid #00FF00; /* Borde verde */
+    font-size: 1em;
+    color: #00FF00; /* Texto verde */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #001400; /* Fondo oscuro para filas impares */
+}
+
+.footer p, .icon:hover {
+    color: #00FF00; /* Color verde brillante al pasar el ratón */
+}
+
+.image-container {
+    display: flex; /* Usa Flexbox para alinear los elementos en una fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples filas si es necesario */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+.image-container img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border: 1px solid #ddd; /* Opcional: agrega un borde alrededor de las imágenes */
+    border-radius: 4px; /* Opcional: agrega bordes redondeados a las imágenes */
+}
+.file{
+    margin-left: 25%;
+}
+
+.analisis-link {
+    margin-left: 45%;
+    color: #00FF00; /* Color del texto y del icono */
+    display: flex;
+    align-items: center; /* Alinear verticalmente el texto y el icono */
+    font-size: 1.2em; /* Tamaño de la fuente para el texto y el icono */
+    transition: color 0.3s ease; /* Suavizar la transición del color */
+    margin-top:auto;
+}
+
+.analisis-link i {
+    margin-left: 8px; /* Espacio entre el texto y el icono */
+    font-size: 1.5em; /* Tamaño del icono */
+}
+
+.analisis-link:hover {
+    color: #00FF00; /* Mantiene el color verde brillante al pasar el ratón */
+}
