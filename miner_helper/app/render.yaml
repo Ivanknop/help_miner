@@ -2,10 +2,10 @@ services:
   - type: web
     name: mi-flask-app
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r miner_helper/app/requirements.txt
     startCommand: python app.py
     plan: free
     envVars:
       - key: PYTHON_VERSION
         value: 3.10
-    autoDeploy: true
+    autoDeploy: true  
