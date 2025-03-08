@@ -14,7 +14,8 @@ def detect_encoding(file_path):
 
 def clean_dir(path):
     """Limpia todos los archivos en el directorio especificado."""
-    print(path)
+    
+    print("Directorio de trabajo actual:", os.getcwd()) 
     for filename in os.listdir(path):
         file_path = os.path.join(path, filename)
         try:
@@ -34,13 +35,12 @@ app.secret_key = 'your_secret_key'
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(__file__), 'tmp')
 
 @app.route('/')
-def index(): 
-       
+def index():  
     clean_dir(app.config['UPLOAD_FOLDER'])
-    clean_dir('static/histograms')
-    clean_dir('static/box_plots')
-    clean_dir('static/bar_plots')
-    clean_dir('static/correlation_matrix')
+    clean_dir('miner_helper/app/static/histograms')
+    clean_dir('miner_helper/app/static/box_plots')
+    clean_dir('miner_helper/app/static/bar_plots')
+    clean_dir('miner_helper/app/static/correlation_matrix')
     return render_template('index.html',page_title='Inicio')
 
 @app.route('/process')
@@ -83,7 +83,7 @@ def upload_file():
             data = pd.read_csv(
                 file_path, 
                 encoding=encoding, 
-                on_bad_lines='skip',  # Saltar líneas problemáticas
+                #on_bad_lines='skip',  # Saltar líneas problemáticas
                 skip_blank_lines=True,   # Ignorar líneas en blanco
                 sep=None                # Detectar delimitador automáticamente          
             )
@@ -162,4 +162,5 @@ def bar_plots():
         return f"Error al obtener los diagramas de barra: {e}"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+

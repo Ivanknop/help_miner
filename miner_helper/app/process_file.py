@@ -6,10 +6,10 @@ import matplotlib
 
 matplotlib.use('Agg')
 OUTPUT_DIRS = {
-    'histograms': 'static/histograms',
-    'box_plots': 'static/box_plots',
-    'correlation_matrix': 'static/correlation_matrix',
-    'bar_plots': 'static/bar_plots'
+    'histograms': 'miner_helper/app/static/histograms',
+    'box_plots': 'miner_helper/app/static/box_plots',
+    'correlation_matrix': 'miner_helper/app/static/correlation_matrix',
+    'bar_plots': 'miner_helper/app/static/bar_plots'
 }
 def save_plot(figure, output_dir, filename):
     """Guarda una figura en el directorio de salida especificado."""
