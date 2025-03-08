@@ -2,7 +2,7 @@ services:
   - type: web
     name: mi-flask-app
     env: python
-    buildCommand: pip install -r miner_helper/app/requirements.txt
+    buildCommand: pip install -r app/requirements.txt
     startCommand: python app.py
     plan: free
     envVars:
