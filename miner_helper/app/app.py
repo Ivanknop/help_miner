@@ -30,7 +30,8 @@ def clean_dir(path):
             elif os.path.isdir(file_path):
                 # Recursivamente limpiar subdirectorios
                 clean_dir(file_path)
-
+        except Exception as e:
+            print(f"Error al intentar eliminar {file_path}: {e}")
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
