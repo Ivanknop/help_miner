@@ -3,7 +3,7 @@ services:
     name: mi-flask-app
     env: python
     buildCommand: pip install -r app/requirements.txt
-    startCommand: python app.py
+    startCommand: python app/app.py
     plan: free
     envVars:
       - key: PYTHON_VERSION
