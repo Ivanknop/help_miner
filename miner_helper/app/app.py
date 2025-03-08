@@ -15,17 +15,21 @@ def detect_encoding(file_path):
 def clean_dir(path):
     """Limpia todos los archivos en el directorio especificado."""
     
+    # Verificar si el directorio existe, si no, lo crea
+    if not os.path.exists(path):
+        print(f"El directorio {path} no existe. Creando directorio...")
+        os.makedirs(path)
+    
     print("Directorio de trabajo actual:", os.getcwd()) 
     for filename in os.listdir(path):
         file_path = os.path.join(path, filename)
         try:
             if os.path.isfile(file_path) or os.path.islink(file_path):
                 os.unlink(file_path)
+                print(f"Archivo {file_path} eliminado.")
             elif os.path.isdir(file_path):
                 # Recursivamente limpiar subdirectorios
                 clean_dir(file_path)
-        except Exception as e:
-            print(f'Failed to delete {file_path}. Reason: {e}')
 
 
 app = Flask(__name__)
